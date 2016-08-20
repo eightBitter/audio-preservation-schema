@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+
+        <title>Audio Preservation Schema</title>
+
+        <link rel="stylesheet" type="text/css" href="apsSchema.css" />
+
+        <meta http-equiv="last-modified" content="2014-08-03" />
+
+    </head>
+    <body>
+        <div id="title">
+            <h1>Audio Preservation Schema</h1>
+        </div>
+        <div id="heading">
+            <p>
+                <b>identifier: </b><a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#"
+                    >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#</a>
+            </p>
+            <p><b>date created: </b>2013-11-17 </p>
+            <p><b>date last modified: </b>2014-08-03 </p>
+        </div>
+        <hr />
+        <div id="tableOfContents">
+
+            <h1>Table of Contents</h1>
+
+            <ol>
+
+                <li>
+                    <a href="apsSchema.html#introduction">Introduction</a>
+
+                </li>
+
+                <li>
+                    <a href="apsSchema.html#index">Index of Terms</a>
+
+                </li>
+
+                <li>
+                    <a href="apsSchema.html#properties">Properties</a>
+
+                </li>
+
+                <li>
+                    <a href="apsSchema.html#classes">Classes</a>
+
+                </li>
+
+                <li>
+                    <a href="apsSchema.html#logicalGrouping">Logical Grouping of Physical Audio
+                        Formats</a>
+
+                </li>
+
+            </ol>
+
+        </div>
+        <hr />
+        <div id="introduction">
+            <h1>Introduction</h1>
+            <p>The Audio Preservation Schema element set is a set of metadata elements (classes and
+                properties) designed to supply critical preservation information about a sound
+                recording in order to further preserve and carefully digitize the sound recording.
+                The elements in this schema are largely based on <a href="http://www.dlib.indiana.edu/projects/sounddirections/facet/facet_formats.pdf" target="blank">FACET: Format Characteristics and
+                Preservation Problems (pdf)</a>, written by Michael Casey.</p>
+            <p>This page was generated using <a href="apsSchema_transformation.xsl">this XSL Transformation (xsl)</a> and then styled with <a href="apsSchema.css">this stylesheet (css)</a>. All HTML coding, with the exception of this introduction, is embedded in the XSL file. Because of this, any future changes to the schema can easily be translated over to this page without
+ manually updating the coding.</p>
+
+			<p>If you have any questions, comments, or recommendations about this project, feel free to contact me at jtshelby [at] indiana [dot] edu.</p>
+        </div>
+        <hr />
+        <div id="index">
+            <h1>Index of Terms</h1>
+            <p><a href="apsSchema.html#bitDepth">bitDepth</a>, <a href="apsSchema.html#brand"
+                    >brand</a>, <a href="apsSchema.html#brandName">brandName</a>, <a
+                    href="apsSchema.html#carrierName">carrierName</a>, <a
+                    href="apsSchema.html#cassetteType">cassetteType</a>, <a
+                    href="apsSchema.html#child">child</a>, <a href="apsSchema.html#childID"
+                    >childID</a>, <a href="apsSchema.html#collectionID">collectionID</a>, <a
+                    href="apsSchema.html#condition">condition</a>, <a
+                    href="apsSchema.html#conditionStatus">conditionStatus</a>, <a
+                    href="apsSchema.html#datType">datType</a>, <a href="apsSchema.html#discSpeed"
+                    >discSpeed</a>, <a href="apsSchema.html#generation">generation</a>, <a
+                    href="apsSchema.html#hasCondition">hasCondition</a>, <a href="apsSchema.html#id"
+                    >id</a>, <a href="apsSchema.html#manufacturer">manufacturer</a>, <a
+                    href="apsSchema.html#material">material</a>, <a
+                    href="apsSchema.html#modelNumber">modelNumber</a>, <a
+                    href="apsSchema.html#parent">parent</a>, <a href="apsSchema.html#parentID"
+                    >parentID</a>, <a href="apsSchema.html#playTime">playTime</a>, <a
+                    href="apsSchema.html#sampleRate">sampleRate</a>, <a
+                    href="apsSchema.html#thickness">thickness</a>, <a
+                    href="apsSchema.html#trackConfig">trackConfig</a>, <a
+                    href="apsSchema.html#wireSpeed">wireSpeed</a>, <a href="apsSchema.html#wireType"
+                    >wireType</a>, <a href="apsSchema.html#Disc">Disc</a>, <a
+                    href="apsSchema.html#AluminumDisc">AluminumDisc</a>, <a href="apsSchema.html#CD"
+                    >CD</a>, <a href="apsSchema.html#LacquerDisc">LacquerDisc</a>, <a
+                    href="apsSchema.html#LP">LP</a>, <a href="apsSchema.html#ShellacDisc"
+                    >ShellacDisc</a>, <a href="apsSchema.html#Tape">Tape</a>, <a
+                    href="apsSchema.html#Cassette">Cassette</a>, <a href="apsSchema.html#TypeI"
+                    >TypeI</a>, <a href="apsSchema.html#TypeII">TypeII</a>, <a
+                    href="apsSchema.html#TypeIII">TypeIII</a>, <a href="apsSchema.html#TypeIV"
+                    >TypeIV</a>, <a href="apsSchema.html#DAT">DAT</a>, <a href="apsSchema.html#DDS"
+                    >DDS</a>, <a href="apsSchema.html#Standard">Standard</a>, <a
+                    href="apsSchema.html#OpenReelTape">OpenReelTape</a>, <a
+                    href="apsSchema.html#Wire">Wire</a>, <a href="apsSchema.html#PreWar">PreWar</a>,
+                    <a href="apsSchema.html#PostWar">PostWar</a>, <a href="apsSchema.html#Minor"
+                    >Minor</a>, <a href="apsSchema.html#Moderate">Moderate</a>, <a
+                    href="apsSchema.html#Severe">Severe</a>, <a href="apsSchema.html#FullTrack"
+                    >FullTrack</a>, <a href="apsSchema.html#HalfTrackMono">HalfTrackMono</a>, <a
+                    href="apsSchema.html#HalfTrackStereo">HalfTrackStereo</a>, <a
+                    href="apsSchema.html#QuarterTrackMono">QuarterTrackMono</a>, <a
+                    href="apsSchema.html#QuarterTrackStereo">QuarterTrackStereo</a></p>
+        </div>
+        <hr />
+        <div id="properties">
+            <div class="backToTop">
+                <a href="apsSchema.html">back to top</a>
+            </div>
+            <h1>Properties</h1>
+            <table>
+                <tr>
+                    <th class="PCname" id="bitDepth">name: </th>
+                    <td class="PCname">bit depth</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#bitDepth"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#bitDepth</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>bit depth</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the number of bits of information per sample, measured in bits,
+                        used to record the sound recording (ex. 16 bit) </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="brand">name: </th>
+                    <td class="PCname">brand</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#brand"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#brand</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>brand</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Acts as a wrapper for information about the brand of the carrier </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="brandName">name: </th>
+                    <td class="PCname">brand name</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#brandName"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#brandName</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>brand name</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the brand name of the item (ex. BASF, Scotch)</td>
+                </tr>
+                <tr>
+                    <th>sub-property of: </th>
+                    <td>
+                        <a href="apsSchema.html#brand">brand</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#BrandName">BrandName</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="carrierName">name: </th>
+                    <td class="PCname">carrier name</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#carrierName"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#carrierName</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>carrier name</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Specifies the name of the carrier (ex. Lacquer disc or open reel tape) </td>
+                </tr>
+                <tr>
+                    <th>domain: </th>
+                    <td>
+                        <a href="apsSchema.html#Carrier">Carrier</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#Carrier">Carrier</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="cassetteType">name: </th>
+                    <td class="PCname">cassette type</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#cassetteType"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#cassetteType</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>cassette type</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the play type of the cassette (ex. Type I, Type IV)</td>
+                </tr>
+                <tr>
+                    <th>domain: </th>
+                    <td>
+                        <a href="apsSchema.html#Cassette">Cassette</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#Cassette">Cassette</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="child">name: </th>
+                    <td class="PCname">child</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#child"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#child</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>child</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Acts as a wrapper for information about a carrier whose content was copied
+                        from the carrier being described. </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="childID">name: </th>
+                    <td class="PCname">child identifier</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#childID"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#childID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>child identifier</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates an indentifier for an item whose sound recording was copied from
+                        the item being described. </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#ChildID">ChildID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="collectionID">name: </th>
+                    <td class="PCname">collection identifier</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#collectionID"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#collectionID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>collection identifier</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates an indentifier for the collection that the item belongs to. </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="condition">name: </th>
+                    <td class="PCname">condition</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#condition"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#condition</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>condition</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Acts as a wrapper for condition information</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="conditionStatus">name: </th>
+                    <td class="PCname">condition status</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#conditionStatus"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#conditionStatus</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>condition status</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the severity of the condition (ex. Minor, mild, or severe) </td>
+                </tr>
+                <tr>
+                    <th>sub-property of: </th>
+                    <td>
+                        <a href="apsSchema.html#condition">condition</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#ConditionStatus">ConditionStatus</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="datType">name: </th>
+                    <td class="PCname">digital audio tape (DAT) type</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#datType"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#datType</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>digital audio tape (DAT) type</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Specifies whether the digital audio tape (DAT) is a standard tape or a
+                        digital data storage tape </td>
+                </tr>
+                <tr>
+                    <th>domain: </th>
+                    <td>
+                        <a href="apsSchema.html#DAT">DAT</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#DAT">DAT</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="discSpeed">name: </th>
+                    <td class="PCname">disc speed</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#discSpeed"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#discSpeed</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>disc speed</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates at what speed, in revolutions per minute (RPM), the sound
+                        recording was recorded onto a disc carrier </td>
+                </tr>
+                <tr>
+                    <th>domain: </th>
+                    <td>
+                        <a href="apsSchema.html#Disc">Disc</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#DiscSpeed">DiscSpeed</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="generation">name: </th>
+                    <td class="PCname">generation</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#generation"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#generation</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>generation</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the duplication level of a copied carrier. For example, if the
+                        recording on a carrier was directly transferred from the original carrier,
+                        the copy would be a first generation copy (ex. 1st, 2nd) </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#OrdinalNumber">OrdinalNumber</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="hasCondition">name: </th>
+                    <td class="PCname">has condition</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#hasCondition"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#hasCondition</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>has condition</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates a condition that the item has (ex. Mold or delamination) </td>
+                </tr>
+                <tr>
+                    <th>sub-property of: </th>
+                    <td>
+                        <a href="apsSchema.html#condition">condition</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#Condition">Condition</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="id">name: </th>
+                    <td class="PCname">identifier</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#id"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#id</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates an indentifier for the item</td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#ID">ID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="manufacturer">name: </th>
+                    <td class="PCname">manufacturer</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#manufacturer"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#manufacturer</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>manufacturer</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the name of the company that manufactures the carrier</td>
+                </tr>
+                <tr>
+                    <th>sub-property of: </th>
+                    <td>
+                        <a href="apsSchema.html#brand">brand</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#Manufacturer">Manufacturer</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="material">name: </th>
+                    <td class="PCname">material</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#material"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#material</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>material</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates a material used in the creation of the carrier (ex. Aluminum or
+                        polyester) </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#Material">Material</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="modelNumber">name: </th>
+                    <td class="PCname">model number</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#modelNumber"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#modelNumber</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>model number</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the model number of the item (ex. 111 or C-60)</td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#ModelNumber">ModelNumber</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="parent">name: </th>
+                    <td class="PCname">parent</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#parent"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#parent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>parent</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Acts as a wrapper for information about a carrier whose content was copied
+                        to the carrier being described </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="parentID">name: </th>
+                    <td class="PCname">parent identifier</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#parentID"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#parentID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>parent identifier</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates an identifier for an item whose sound recording was copied to the
+                        item being described </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#ParentID">ParentID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="playTime">name: </th>
+                    <td class="PCname">play time</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#playTime"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#playTime</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>play time</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the duration from beginning to end of the sound recording.
+                        Recommended best practices are to use the XML data type for duration </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="sampleRate">name: </th>
+                    <td class="PCname">sample rate</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#sampleRate"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#sampleRate</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>sample rate</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the number of samples per second, measured in kiloHertz (kHz),
+                        used to record the sound recording (ex. 96 kHz) </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="thickness">name: </th>
+                    <td class="PCname">thickness</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#thickness"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#thickness</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>thickness</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the thickness, in millimeters or inches, of the carrier. Usually
+                        used for tape carriers, but can be used for wire carriers when needed (ex.
+                        1.5 mil, 1.0 mil) </td>
+                </tr>
+                <tr>
+                    <th>domain: </th>
+                    <td>
+                        <a href="apsSchema.html#Carrier">Carrier</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="trackConfig">name: </th>
+                    <td class="PCname">track configuration</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#trackConfig"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#trackConfig</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>track configuration</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates the track configuration of a tape carrier (e.g., full track or
+                        half track mono) </td>
+                </tr>
+                <tr>
+                    <th>domain: </th>
+                    <td>
+                        <a href="apsSchema.html#Tape">Tape</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#TrackConfig">TrackConfig</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="wireSpeed">name: </th>
+                    <td class="PCname">wire speed</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#wireSpeed"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#wireSpeed</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>wire speed</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Indicates at what speed, in inches per second (IPS), the sound recording was
+                        recorded onto a wire carrier </td>
+                </tr>
+                <tr>
+                    <th>domain: </th>
+                    <td>
+                        <a href="apsSchema.html#Wire">Wire</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#WireSpeed">WireSpeed</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="wireType">name: </th>
+                    <td class="PCname">wire type</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#wireType"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#wireType</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>wire type</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Specifies whether the wire carrier was made before the outbreak of World War
+                        II or after. Pre-war wires were unstandardized, so statements about wire
+                        thickness, material, and speed are recommended when the carrier is pre-war
+                    </td>
+                </tr>
+                <tr>
+                    <th>domain: </th>
+                    <td>
+                        <a href="apsSchema.html#Wire">Wire</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>range: </th>
+                    <td>
+                        <a href="apsSchema.html#Wire">Wire</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr />
+        <div id="classes">
+            <div class="backToTop">
+                <a href="apsSchema.html">back to top</a>
+            </div>
+            <h1>Classes</h1>
+            <table>
+                <tr>
+                    <th class="PCname" id="BrandName">name: </th>
+                    <td class="PCname">Brand Name</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#BrandName"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#BrandName</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Brand Name</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The name of the brand of the carrier</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Carrier">name: </th>
+                    <td class="PCname">Carrier</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Carrier"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Carrier</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Carrier</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The physical object on which a sound recording is recorded onto and house in
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Child">name: </th>
+                    <td class="PCname">Child</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Child"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Child</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Child</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>A carrier whose content was copied from the carrier being described </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="ChildID">name: </th>
+                    <td class="PCname">Child Identifier</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ChildID"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ChildID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Child Identifier</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>A unique identifier for an item that is a copy of the current carrier </td>
+                </tr>
+                <tr>
+                    <th>sub-class of</th>
+                    <td>
+                        <a href="apsSchema.html#ID">ID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Condition">name: </th>
+                    <td class="PCname">Condition</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Condition"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Condition</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Condition</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Any chemical or physical deformation or substance that jeopardizes the
+                        integrity of the item or collection </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="ConditionStatus">name: </th>
+                    <td class="PCname">Condition Status</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ConditionStatus"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ConditionStatus</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Condition Status</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The level of severity of a condition</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Copy">name: </th>
+                    <td class="PCname">Copy</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Copy"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Copy</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Copy</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>A statement indicating that the carrier contains a sound recording that was
+                        transferred from another carrier. </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="DiscSpeed">name: </th>
+                    <td class="PCname">Disc Speed</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#DiscSpeed"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#DiscSpeed</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Disc Speed</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The speed in revolutions per minute (RPM) of a disc carrier</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="ID">name: </th>
+                    <td class="PCname">Identifier</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ID"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Identifier</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>A unique identifier for the item</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Manufacturer">name: </th>
+                    <td class="PCname">Manufacturer</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Manufacturer"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Manufacturer</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Manufacturer</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The name of the company who manufactures the carrier</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Material">name: </th>
+                    <td class="PCname">Material</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Material"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Material</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Material</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>A substance that contributes to the creation of the carrier</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="ModelNumber">name: </th>
+                    <td class="PCname">Model Number</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ModelNumber"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ModelNumber</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Model Number</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The number of the model of the carrier</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="OrdinalNumber">name: </th>
+                    <td class="PCname">Ordinal Number</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#OrdinalNumber"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#OrdinalNumber</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Ordinal Number</td>
+                </tr>
+                <tr>
+                    <th>further defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/English_numerals#Ordinal_numbers"
+                            target="_blank"
+                            >http://en.wikipedia.org/wiki/English_numerals#Ordinal_numbers</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Original">name: </th>
+                    <td class="PCname">Original</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Original"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Original</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Original</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>A statement indicating that the carrier is the initial carrier on which a
+                        sound recording was recorded on. </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Parent">name: </th>
+                    <td class="PCname">Parent</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Parent"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Parent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Parent</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>A carrier whose content was copied to the carrier being described </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="ParentID">name: </th>
+                    <td class="PCname">Parent Identifier</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ParentID"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ParentID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Parent Identifier</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>A unique identifier for a carrier in which the current carrier was copied
+                        from </td>
+                </tr>
+                <tr>
+                    <th>sub-class of</th>
+                    <td>
+                        <a href="apsSchema.html#ID">ID</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="TapeSpeed">name: </th>
+                    <td class="PCname">Tape Speed</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TapeSpeed"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TapeSpeed</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Tape Speed</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The speed in inches per second (IPS) of a tape carrier</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="TrackConfig">name: </th>
+                    <td class="PCname">Track Configuration</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TrackConfig"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TrackConfig</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Track Configuration</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The track configuration of a tape carrier. See section 2.2.5 of the Facet
+                        Formats document. </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="WireSpeed">name: </th>
+                    <td class="PCname">Wire Speed</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#WireSpeed"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#WireSpeed</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Wire Speed</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The speed in inches per second (IPS) of a wire carrier</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Disc">name: </th>
+                    <td class="PCname">Disc</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Disc"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Disc</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Disc</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="AluminumDisc">name: </th>
+                    <td class="PCname">Aluminum Disc</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#AluminumDisc"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#AluminumDisc</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Aluminum Disc</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>see chapter 5 of the Facet Formats document</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a
+                            href="http://www.dlib.indiana.edu/projects/sounddirections/facet/facet_formats.pdf"
+                            target="_blank"
+                            >http://www.dlib.indiana.edu/projects/sounddirections/facet/facet_formats.pdf</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="CD">name: </th>
+                    <td class="PCname">Compact Disc</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#CD"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#CD</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Compact Disc</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>There are many different types of Compact Discs. I will eventually add these
+                        to the schema </td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Compact_disc" target="_blank"
+                            >http://en.wikipedia.org/wiki/Compact_disc</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="LacquerDisc">name: </th>
+                    <td class="PCname">Lacquer Disc</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#LacquerDisc"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#LacquerDisc</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Lacquer Disc</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Acetate_disc" target="_blank"
+                            >http://en.wikipedia.org/wiki/Acetate_disc</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="LP">name: </th>
+                    <td class="PCname">Long Play record</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#LP"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#LP</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Long Play record</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/LP_record" target="_blank"
+                            >http://en.wikipedia.org/wiki/LP_record</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="ShellacDisc">name: </th>
+                    <td class="PCname">Shellac Disc</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ShellacDisc"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#ShellacDisc</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Shellac Disc</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The shellac disc is most commonly referred to as 78s (78 revolutions per
+                        minute). These are made with a shellac material, which makes them rather
+                        brittle. </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Tape">name: </th>
+                    <td class="PCname">Tape</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Tape"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Tape</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Tape</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Cassette">name: </th>
+                    <td class="PCname">Cassette tape</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Cassette"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Cassette</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Cassette tape</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Cassette_tape" target="_blank"
+                            >http://en.wikipedia.org/wiki/Cassette_tape</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="TypeI">name: </th>
+                    <td class="PCname">Type I</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TypeI"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TypeI</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Type I</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Compact_Cassette#Cassette_types"
+                            target="_blank"
+                            >http://en.wikipedia.org/wiki/Compact_Cassette#Cassette_types</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="TypeII">name: </th>
+                    <td class="PCname">Type II</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TypeII"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TypeII</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Type II</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Compact_Cassette#Cassette_types"
+                            target="_blank"
+                            >http://en.wikipedia.org/wiki/Compact_Cassette#Cassette_types</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="TypeIII">name: </th>
+                    <td class="PCname">Type III</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TypeIII"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TypeIII</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Type III</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Compact_Cassette#Cassette_types"
+                            target="_blank"
+                            >http://en.wikipedia.org/wiki/Compact_Cassette#Cassette_types</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="TypeIV">name: </th>
+                    <td class="PCname">Type IV</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TypeIV"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#TypeIV</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Type IV</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Compact_Cassette#Cassette_types"
+                            target="_blank"
+                            >http://en.wikipedia.org/wiki/Compact_Cassette#Cassette_types</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="DAT">name: </th>
+                    <td class="PCname">Digital Audio Tape</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#DAT"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#DAT</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Digital Audio Tape</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>see chapter 4 of the Facet Formats document</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a
+                            href="http://www.dlib.indiana.edu/projects/sounddirections/facet/facet_formats.pdf"
+                            target="_blank"
+                            >http://www.dlib.indiana.edu/projects/sounddirections/facet/facet_formats.pdf</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="DDS">name: </th>
+                    <td class="PCname">DDS</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#DDS"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#DDS</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>DDS, Digital Data Storage, Data Cartridge, Data Tape, Data-Grade Tape</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The casing on a DDS DAT tape will have one of the labels listed under this
+                        class. </td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Digital_Data_Storage" target="_blank"
+                            >http://en.wikipedia.org/wiki/Digital_Data_Storage</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Standard">name: </th>
+                    <td class="PCname">Audio-Grade Tape</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Standard"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Standard</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Audio-Grade Tape</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td> Audio-grade DAT tapes are the most standard and safest type of DAT tape. If
+                        the casing of the tape does not indicate that it is a DDS tape, then it will
+                        most likely be an audio-grade tape. </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="OpenReelTape">name: </th>
+                    <td class="PCname">Open Reel Tape</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#OpenReelTape"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#OpenReelTape</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Open Reel Tape</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Reel-to-reel_audio_tape_recording"
+                            target="_blank"
+                            >http://en.wikipedia.org/wiki/Reel-to-reel_audio_tape_recording</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Wire">name: </th>
+                    <td class="PCname">Wire</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Wire"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Wire</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Wire</td>
+                </tr>
+                <tr>
+                    <th>defined by: </th>
+                    <td>
+                        <a href="http://en.wikipedia.org/wiki/Wire_recording" target="_blank"
+                            >http://en.wikipedia.org/wiki/Wire_recording</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="PreWar">name: </th>
+                    <td class="PCname">Pre World War II Wire</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#PreWar"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#PreWar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Pre World War II Wire</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>The following was taken from the Facet Formats documentation: Wires recorded
+                        before World War II may be steel, but not stainless steel, and subject to
+                        corrosion. These early wires are also likely a non-standard size and/or
+                        speed. The primary manufacturer of pre-World War II wire recorders was
+                        Armour, which also licensed its technology to General Electric. Note that
+                        this category is for Armour brand wires, not wires from other manufacturers
+                        labeled as conforming to the Armour standard. </td>
+                </tr>
+                <tr>
+                    <th>see also: </th>
+                    <td>
+                        <a
+                            href="http://www.dlib.indiana.edu/projects/sounddirections/facet/facet_formats.pdf"
+                            target="_blank"
+                            >http://www.dlib.indiana.edu/projects/sounddirections/facet/facet_formats.pdf</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="PostWar">name: </th>
+                    <td class="PCname">Post World War II Wire</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#PostWar"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#PostWar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Post World War II Wire</td>
+                </tr>
+                <tr>
+                    <th>definition: </th>
+                    <td>Post World War II wires were stainless steel and the dimensions of the wires
+                        were standardized </td>
+                </tr>
+                <tr>
+                    <th>see also: </th>
+                    <td>
+                        <a
+                            href="http://www.dlib.indiana.edu/projects/sounddirections/facet/facet_formats.pdf"
+                            target="_blank"
+                            >http://www.dlib.indiana.edu/projects/sounddirections/facet/facet_formats.pdf</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Minor">name: </th>
+                    <td class="PCname">Minor</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Minor"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Minor</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Minor</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Moderate">name: </th>
+                    <td class="PCname">Moderate</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Moderate"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Moderate</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="Severe">name: </th>
+                    <td class="PCname">Severe</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Severe"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#Severe</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Severe</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="FullTrack">name: </th>
+                    <td class="PCname">Full Track</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#FullTrack"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#FullTrack</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Full Track</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="HalfTrackMono">name: </th>
+                    <td class="PCname">Halftrack Mono</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#HalfTrackMono"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#HalfTrackMono</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Halftrack Mono</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="HalfTrackStereo">name: </th>
+                    <td class="PCname">Halftrack Stereo</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#HalfTrackStereo"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#HalfTrackStereo</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Halftrack Stereo</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="QuarterTrackMono">name: </th>
+                    <td class="PCname">Quartertrack Mono</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#QuarterTrackMono"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#QuarterTrackMono</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Quartertrack Mono</td>
+                </tr>
+                <tr>
+                    <th class="PCname" id="QuarterTrackStereo">name: </th>
+                    <td class="PCname">Quartertrack Stereo</td>
+                </tr>
+                <tr>
+                    <th>url: </th>
+                    <td>
+                        <a
+                            href="http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#QuarterTrackStereo"
+                            >http://jacobshelby.org/schemas/aps/2014/08/03/apsSchema.rdf#QuarterTrackStereo</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>label: </th>
+                    <td>Quartertrack Stereo</td>
+                </tr>
+            </table>
+        </div>
+        <hr />
+        <div id="logicalGrouping">
+            <div class="backToTop">
+                <a href="apsSchema.html">back to top</a>
+            </div>
+            <h1>Logical Grouping of Physical Audio Formats</h1>
+            <ul id="logicalGroupingWrapper">
+                <li>
+                    <a href="apsSchema.html#Carrier">Carrier</a>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <a href="apsSchema.html#Disc">Disc</a>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="apsSchema.html#AluminumDisc">AluminumDisc</a>
+                                </li>
+                                <li>
+                                    <a href="apsSchema.html#CD">CD</a>
+                                </li>
+                                <li>
+                                    <a href="apsSchema.html#LacquerDisc">LacquerDisc</a>
+                                </li>
+                                <li>
+                                    <a href="apsSchema.html#LP">LP</a>
+                                </li>
+                                <li>
+                                    <a href="apsSchema.html#ShellacDisc">ShellacDisc</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="apsSchema.html#Tape">Tape</a>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="apsSchema.html#Cassette">Cassette</a>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="apsSchema.html#TypeI">TypeI</a>
+                                        </li>
+                                        <li>
+                                            <a href="apsSchema.html#TypeII">TypeII</a>
+                                        </li>
+                                        <li>
+                                            <a href="apsSchema.html#TypeIII">TypeIII</a>
+                                        </li>
+                                        <li>
+                                            <a href="apsSchema.html#TypeIV">TypeIV</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="apsSchema.html#DAT">DAT</a>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="apsSchema.html#DDS">DDS</a>
+                                        </li>
+                                        <li>
+                                            <a href="apsSchema.html#Standard">Standard</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="apsSchema.html#OpenReelTape">OpenReelTape</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <a href="apsSchema.html#Wire">Wire</a>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="apsSchema.html#PreWar">PreWar</a>
+                                </li>
+                                <li>
+                                    <a href="apsSchema.html#PostWar">PostWar</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

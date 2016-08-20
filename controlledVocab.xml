@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controlledVocab xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mods="http://www.loc.gov/mods/v3"
+    xmlns:ead="urn:isbn:1-931666-22-9" xmlns:aps="rdf_apsSchema.rdf#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Carrier rdf:ID="Disc"/>
+    <Disc rdf:ID="AluminumDisc"/>
+    <Disc rdf:ID="CD"/>
+    <Disc rdf:ID="LacquerDisc"/>
+    <Disc rdf:ID="LP"/>
+    <Disc rdf:ID="ShellacDisc"/>
+    <Carrier rdf:ID="Tape"/>
+    <Tape rdf:ID="Cassette"/>
+    <Cassette rdf:ID="TypeI"/>
+    <Cassette rdf:ID="TypeII"/>
+    <Cassette rdf:ID="TypeIII"/>
+    <Cassette rdf:ID="TypeIV"/>
+    <Tape rdf:ID="DAT"/>
+    <DAT rdf:ID="DDS"/>
+    <DAT rdf:ID="Standard"/>
+    <Tape rdf:ID="OpenReelTape"/>
+    <Carrier rdf:ID="Wire"/>
+    <Wire rdf:ID="PreWar"/>
+    <Wire rdf:ID="PostWar"/>
+    <ConditionStatus rdf:ID="Minor"/>
+    <ConditionStatus rdf:ID="Moderate"/>
+    <ConditionStatus rdf:ID="Severe"/>
+    <TrackConfig rdf:ID="FullTrack"/>
+    <TrackConfig rdf:ID="HalfTrackMono"/>
+    <TrackConfig rdf:ID="HalfTrackStereo"/>
+    <TrackConfig rdf:ID="QuarterTrackMono"/>
+    <TrackConfig rdf:ID="QuarterTrackStereo"/>
+</controlledVocab>
